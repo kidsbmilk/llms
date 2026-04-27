@@ -34,9 +34,9 @@ export function sendUnifiedRequest(
   // maxcompletiontokens.transformer.ts 里也有。
   request.max_completion_tokens = request.max_tokens;
   delete request.max_tokens;
-  delete req.body.reasoning;
-  delete req.body.thinking;
-  delete req.body.tools;
+  delete request.reasoning;
+  delete request.thinking;
+  delete request.tools;
 
   const fetchOptions: RequestInit = {
     method: "POST",
