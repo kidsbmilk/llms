@@ -19,7 +19,7 @@
     "start": "node dist/cjs/server.cjs",
     "start:esm": "node dist/esm/server.mjs",
     "lint": "eslint src --ext .ts,.tsx",
-    "postinstall": "npm run build"
+    "postinstall": "npm i --omit=dev=false && npm run build"
   },
   "keywords": [],
   "author": "",
