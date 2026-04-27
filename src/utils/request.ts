@@ -31,8 +31,12 @@ export function sendUnifiedRequest(
     combinedSignal = timeoutSignal;
   }
 
+  // maxcompletiontokens.transformer.ts 里也有。
   request.max_completion_tokens = request.max_tokens;
   delete request.max_tokens;
+  delete req.body.reasoning;
+  delete req.body.thinking;
+  delete req.body.tools;
 
   const fetchOptions: RequestInit = {
     method: "POST",
