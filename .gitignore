@@ -1,5 +1,4 @@
 pnpm-lock.yaml
-dist
 .env.example
 node_modules
 .DS_Store
