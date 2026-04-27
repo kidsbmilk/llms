@@ -31,6 +31,9 @@ export function sendUnifiedRequest(
     combinedSignal = timeoutSignal;
   }
 
+  request.max_completion_tokens = request.max_tokens;
+  delete request.max_tokens;
+
   const fetchOptions: RequestInit = {
     method: "POST",
     headers: headers,
